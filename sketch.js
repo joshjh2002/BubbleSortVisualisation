@@ -11,7 +11,7 @@ function setup() {
   createCanvas(width, height);
 
   for (let i = 0; i < width / blockWidth; i++) {
-    let rnd = random(0, height);
+    let rnd = noise(i / 100, height) * height;
     array.push(rnd);
   }
   bubbleSort();
